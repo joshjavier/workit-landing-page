@@ -1,0 +1,26 @@
+{
+  "name": "workit-landing-page",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "author": "Josh Javier",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@prettier/plugin-xml": "^2.2.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "djlint": "^1.30.2",
+    "modern-css-reset": "^1.4.0",
+    "postcss": "^8.4.24",
+    "postcss-import": "^15.1.0",
+    "postcss-import-ext-glob": "^2.1.1",
+    "prettier": "2.8.8",
+    "tailwindcss": "^3.3.2"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
