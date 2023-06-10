@@ -1,0 +1,26 @@
+{
+  "title": "Colors",
+  "description": "Hex color codes",
+  "items": [
+    {
+      "name": "Dark Purple",
+      "value": "#24053E"
+    },
+    {
+      "name": "Davy's Grey",
+      "value": "#584D62"
+    },
+    {
+      "name": "Eucalyptus",
+      "value": "#44FFA1"
+    },
+    {
+      "name": "Ghost White",
+      "value": "#FCF8FF"
+    },
+    {
+      "name": "White",
+      "value": "#FFFFFF"
+    }
+  ]
+}

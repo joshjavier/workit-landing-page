@@ -1,0 +1,21 @@
+.site-footer {
+  --flow-space: var(--space-14);
+  padding-top: var(--space-8);
+  padding-bottom: calc(var(--space-16) + (112 - 64) * var(--fluid-bp));
+}
+
+.site-footer .logo {
+  margin-inline: auto;
+}
+
+.site-footer address,
+.site-footer ul {
+  max-inline-size: unset;
+}
+
+.site-footer .icon-links {
+  padding: 0;
+  display: flex;
+  gap: var(--space-7);
+  justify-content: center;
+}

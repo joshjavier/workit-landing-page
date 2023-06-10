@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ site.title }}</title>
+
+  <!-- Preload web fonts -->
+  <link rel="preload" href="./fonts/Fraunces144pt-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- SEO meta tags -->
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url + page.url }}">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  {% include "partials/icons.svg" %}
+
+  <header class="[ site-header ] [ bg-dark-purple text-white ]">
+    <div class="wrapper">
+      <img role="img" src="./images/logo-light.svg" alt="Workit logo" width="97" height="26" class="logo">
+      <a href="#" class="button-lite">Apply for access</a>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer class="[ site-footer ] [ flow wrapper ]">
+    <img role="img" src="./images/logo-dark.svg" alt="Workit logo" width="97" height="26" class="logo">
+
+    <!-- Social media links -->
+    <address>
+      <ul role="list" class="icon-links">
+        {%- for item in ['facebook', 'twitter', 'instagram'] %}
+          <li>
+            <a href="#" class="inline-flex">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="#icon-{{ item }}"></use>
+              </svg>
+              <span class="visually-hidden">{{ item | capitalize }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </address>
+  </footer>
+</body>
+</html>

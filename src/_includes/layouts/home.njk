@@ -1,0 +1,44 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <main>
+    <!-- Hero section -->
+    <div class="[ hero ] [ region ] [ bg-dark-purple text-white ]">
+      <div class="[ wrapper flow ]">
+        <h1>{{ title | md | safe }}</h1>
+        <a href="#" class="button">Learn more</a>
+      </div>
+    </div>
+
+    <!-- Features section -->
+    <section class="[ features ] [ region ]">
+      <div class="wrapper">
+        <h2 class="visually-hidden">Features</h2>
+        <ol role="list" class="switcher">
+          {%- for item in features %}
+            <li class="feature">
+              <div class="switcher">
+                <div class="marker">{{ loop.index }}</div>
+                <div class="content flow">
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.summary }}</p>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+
+    <!-- Call to action section -->
+    <section class="wrapper">
+      <!-- Image founder -->
+
+      <div class=" [ cta ] [ flow ] [ bg-dark-purple text-white ]">
+        <h2>{{ cta.title }}</h2>
+        <p>{{ cta.content }}</p>
+        <a href="#" class="button">Apply for access</a>
+      </div>
+    </section>
+  </main>
+{% endblock %}

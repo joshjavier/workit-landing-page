@@ -1,0 +1,26 @@
+.features {
+  /* Turn any child switchers into a row layout when context is 50rem */
+  --threshold: 50rem;
+  /* Set max width of feature items on column layout */
+  --measure: 57ch;
+}
+
+.features ol {
+  /* Set the horizontal and vertical gutters */
+  --v-gutter: var(--space-7);
+  /* To stick to the design, I used a custom `fluid-bp` that sets 768px (48rem) as the max viewport.
+     Note that I didn't set a CSS lock for this, so it will keep growing, but it shouldn't matter
+     because at 50rem the layout will turn to row, thus removing horizontal gutters. */
+  --h-gutter: calc(
+    var(--space-10) + (48 - 40) *
+      (
+        (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+          (768 - var(--fluid-min-width))
+      )
+  );
+
+  /* Override global measure axiom so it can fill and adapt to its parent container. */
+  max-inline-size: unset;
+  /* Remove the default padding */
+  padding: 0;
+}

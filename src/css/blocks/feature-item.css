@@ -1,0 +1,37 @@
+.feature {
+  --h-gutter: var(--space-6);
+  --v-gutter: var(--space-8);
+  text-align: center;
+  container-type: inline-size;
+}
+
+.feature .switcher {
+  --threshold: 30rem;
+}
+
+@container (min-width: 30rem) {
+  /* We need to set text-align here so we can reference the container .future block */
+  .feature .switcher {
+    text-align: left;
+  }
+}
+
+/* List marker and heading have a different color from body text */
+.feature :first-child {
+  color: var(--color-dark-purple);
+}
+
+.feature .marker {
+  font-family: var(--font-serif);
+  line-height: 1.8;
+  border: 1px solid var(--color-davys-grey);
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  width: calc(48 / 16 * 1em);
+  height: calc(48 / 16 * 1em);
+
+  /* Center vertically on row layout */
+  flex: 0 0 auto;
+  align-self: center;
+}

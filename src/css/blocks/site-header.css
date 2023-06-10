@@ -1,0 +1,8 @@
+.site-header {
+  padding-top: calc(var(--space-8) + (56 - 32) * var(--fluid-bp));
+}
+
+.site-header > .wrapper {
+  display: flex;
+  justify-content: space-between;
+}

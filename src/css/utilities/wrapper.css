@@ -1,0 +1,7 @@
+.wrapper {
+  padding-inline: var(--gutter, var(--space-4));
+  max-width: var(--wrapper-max-width, 70rem);
+  margin-inline: auto;
+  /* Don't include padding in the width calculation */
+  box-sizing: content-box;
+}

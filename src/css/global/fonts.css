@@ -1,0 +1,23 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Fraunces 144pt';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Fraunces144pt-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Manrope-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../fonts/Manrope-Bold.woff2') format('woff2');
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Text Sizes",
+  "description": "Min and max text sizes in px encoded from the Figma file provided by Frontend Mentor.",
+  "items": [
+    {
+      "name": "Step 0",
+      "description": "Body copy and links",
+      "min": 16,
+      "max": 18
+    },
+    {
+      "name": "Step 1",
+      "description": "Numbering for feature items",
+      "min": 20,
+      "max": 24
+    },
+    {
+      "name": "Step 2",
+      "description": "H3, e.g. feature item headings",
+      "min": 28,
+      "max": 32
+    },
+    {
+      "name": "Step 3",
+      "description": "H2, e.g. CTA card heading",
+      "min": 32,
+      "max": 56
+    },
+    {
+      "name": "Step 4",
+      "description": "H1",
+      "min": 50,
+      "max": 80
+    }
+  ]
+}

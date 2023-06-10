@@ -1,0 +1,22 @@
+/**
+ * Inspired by Heydon Pickering's Flexbox Holy Albatross Reincarnated
+ * Info: https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/
+ *
+ * Switcher elements can be configured by defining these custom properties:
+ * --threshold: max width of child elements before the layout switches to column
+ * --h-gutter: gap between rows
+ * --v-gutter: gap between columns
+ */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--h-gutter, var(--space-4));
+  column-gap: var(--v-gutter, var(--space-4));
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold, 30rem) - 100%) * 999);
+  /* Center children if not taking up parent container's full width */
+  margin-inline: auto;
+}

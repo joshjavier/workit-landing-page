@@ -1,0 +1,60 @@
+/* Enforce a measure for all elements, with a few exceptions */
+* {
+  max-inline-size: var(--measure, 60ch);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer,
+section {
+  max-inline-size: none;
+}
+
+/* Set global styles */
+body {
+  font-family: var(--font-base);
+  font-size: var(--size-step-0);
+  line-height: 1.75;
+  font-weight: 400;
+  color: var(--color-davys-grey);
+
+  /* Defaults for wrappers */
+  --wrapper-max-width: 70rem; /* 1120px */
+  --gutter: calc(var(--space-4) + (76 - 16) * var(--fluid-bp));
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--size-step-4);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--size-step-3);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: var(--size-step-2);
+  line-height: 1.25;
+}
+
+a {
+  font-weight: 700;
+  color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-dark-purple);
+}

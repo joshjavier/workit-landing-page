@@ -1,0 +1,42 @@
+.button,
+.button-lite {
+  --accent-color: var(--color-eucalyptus);
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button {
+  --border-size: 2px;
+
+  padding: calc(var(--space-3) - var(--border-size))
+    calc(var(--space-6) - var(--border-size));
+  color: var(--color-dark-purple);
+  background: var(--accent-color);
+  border: var(--border-size) solid var(--accent-color);
+}
+
+/* Variant without background and only has an "underline" */
+.button-lite {
+  position: relative;
+  padding-block: var(--space-1);
+}
+
+.button-lite::after {
+  content: '';
+  background: var(--accent-color);
+  height: calc(3 / 16 * 1em);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Interaction styles */
+.button:hover,
+.button:focus-visible,
+.button-lite:hover,
+.button-lite:focus-visible {
+  color: var(--accent-color);
+  background: var(--color-dark-purple);
+}

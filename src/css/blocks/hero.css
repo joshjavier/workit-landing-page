@@ -1,0 +1,31 @@
+.hero {
+  --region-space: calc(var(--space-16) + (56 - 64) * var(--fluid-bp));
+  --flow-space: calc(var(--space-10) + (48 - 40) * var(--fluid-bp));
+  text-align: center;
+}
+
+/* Set a narrower measure for the hero heading */
+.hero h1 {
+  --measure: 12ch;
+  margin-inline: auto;
+}
+
+/* Underline emphasized words */
+.hero em {
+  position: relative;
+  font-style: normal;
+}
+
+.hero em::after {
+  content: '';
+  background: var(--color-eucalyptus);
+  position: absolute;
+  width: 100%;
+  height: calc(3 / 16 * 1rem);
+  bottom: var(--space-1);
+  left: 0;
+}
+
+.hero > .button {
+  padding-inline: calc(var(--space-6) + (32 - 24) * var(--fluid-bp));
+}

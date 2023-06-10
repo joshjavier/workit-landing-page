@@ -1,0 +1,16 @@
+{
+  "title": "Fonts",
+  "description": "Font stacks expressed as arrays, starting with the ideal font followed by web-safe fallbacks.",
+  "items": [
+    {
+      "name": "Base",
+      "description": "Body copy and globally set text",
+      "value": ["Manrope", "sans-serif"]
+    },
+    {
+      "name": "Serif",
+      "description": "Headings and accent text",
+      "value": ["Fraunces 144pt", "serif"]
+    }
+  ]
+}

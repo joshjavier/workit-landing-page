@@ -1,0 +1,15 @@
+.cta {
+  padding: calc(var(--space-8) + (64 - 32) * var(--fluid-bp));
+  text-align: center;
+  max-inline-size: calc(730 / 16 * 1rem);
+}
+
+@media screen and (min-width: 40em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta > .button {
+  margin-top: var(--space-8);
+}
