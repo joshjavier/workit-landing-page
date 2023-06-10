@@ -1,0 +1,651 @@
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+/* Based on Andy Bell's Modern CSS Reset: https://github.com/Andy-set-studio/modern-css-reset */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin: 0;
+}
+
+/* Prevent zooming when orientation changes on some iOS devices */
+
+html {
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select,
+address {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fraunces 144pt';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Fraunces144pt-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Manrope-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../fonts/Manrope-Bold.woff2') format('woff2');
+}
+
+:root {
+  --color-dark-purple: #24053E;
+  --color-davys-grey: #584D62;
+  --color-eucalyptus: #44FFA1;
+  --color-ghost-white: #FCF8FF;
+  --color-white: #FFFFFF;
+  --font-base: Manrope,sans-serif;
+  --font-serif: "Fraunces 144pt",serif;
+  --size-step-0: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  --size-step-1: clamp(1.25rem, 1.18rem + 0.36vw, 1.5rem);
+  --size-step-2: clamp(1.75rem, 1.68rem + 0.36vw, 2rem);
+  --size-step-3: clamp(2rem, 1.57rem + 2.14vw, 3.5rem);
+  --size-step-4: clamp(3.125rem, 2.59rem + 2.68vw, 5rem);
+  --space-0: 0px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-9: 2.25rem;
+  --space-10: 2.5rem;
+  --space-11: 2.75rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-36: 9rem;
+  --space-40: 10rem;
+  --space-44: 11rem;
+  --space-48: 12rem;
+  --space-52: 13rem;
+  --space-56: 14rem;
+  --space-60: 15rem;
+  --space-64: 16rem;
+  --space-72: 18rem;
+  --space-80: 20rem;
+  --space-96: 24rem;
+  --space-px: 1px;
+  --space-0.5: 0.125rem;
+  --space-1.5: 0.375rem;
+  --space-2.5: 0.625rem;
+  --space-3.5: 0.875rem;
+  /* Use the min and max values in 'design-tokens/viewport.json' */
+  --fluid-min-width: 320;
+  --fluid-max-width: 1440;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+/* Enforce a measure for all elements, with a few exceptions */
+
+* {
+  max-inline-size: var(--measure, 60ch);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer,
+section {
+  max-inline-size: none;
+}
+
+/* Set global styles */
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--size-step-0);
+  line-height: 1.75;
+  font-weight: 400;
+  color: var(--color-davys-grey);
+
+  /* Defaults for wrappers */
+  --wrapper-max-width: 70rem; /* 1120px */
+  --gutter: calc(var(--space-4) + (76 - 16) * var(--fluid-bp));
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--size-step-4);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--size-step-3);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: var(--size-step-2);
+  line-height: 1.25;
+}
+
+a {
+  font-weight: 700;
+  color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-dark-purple);
+}
+
+.button,
+.button-lite {
+  --accent-color: var(--color-eucalyptus);
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button {
+  --border-size: 2px;
+
+  padding: calc(var(--space-3) - var(--border-size))
+    calc(var(--space-6) - var(--border-size));
+  color: var(--color-dark-purple);
+  background: var(--accent-color);
+  border: var(--border-size) solid var(--accent-color);
+}
+
+/* Variant without background and only has an "underline" */
+
+.button-lite {
+  position: relative;
+  padding-block: var(--space-1);
+}
+
+.button-lite::after {
+  content: '';
+  background: var(--accent-color);
+  height: calc(3 / 16 * 1em);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Interaction styles */
+
+.button:hover,
+.button:focus-visible,
+.button-lite:hover,
+.button-lite:focus-visible {
+  color: var(--accent-color);
+  background: var(--color-dark-purple);
+}
+
+.cta {
+  padding: calc(var(--space-8) + (64 - 32) * var(--fluid-bp));
+  text-align: center;
+  max-inline-size: calc(730 / 16 * 1rem);
+}
+
+@media screen and (min-width: 40em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta > .button {
+  margin-top: var(--space-8);
+}
+
+.feature {
+  --h-gutter: var(--space-6);
+  --v-gutter: var(--space-8);
+  text-align: center;
+  container-type: inline-size;
+}
+
+.feature .switcher {
+  --threshold: 30rem;
+}
+
+@container (min-width: 30rem) {
+  /* We need to set text-align here so we can reference the container .future block */
+  .feature .switcher {
+    text-align: left;
+  }
+}
+
+/* List marker and heading have a different color from body text */
+
+.feature :first-child {
+  color: var(--color-dark-purple);
+}
+
+.feature .marker {
+  font-family: var(--font-serif);
+  line-height: 1.8;
+  border: 1px solid var(--color-davys-grey);
+  border-radius: 50%;
+  display: inline-grid;
+  place-content: center;
+  width: calc(48 / 16 * 1em);
+  height: calc(48 / 16 * 1em);
+
+  /* Center vertically on row layout */
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.features {
+  /* Turn any child switchers into a row layout when context is 50rem */
+  --threshold: 50rem;
+  /* Set max width of feature items on column layout */
+  --measure: 57ch;
+}
+
+.features ol {
+  /* Set the horizontal and vertical gutters */
+  --v-gutter: var(--space-7);
+  /* To stick to the design, I used a custom `fluid-bp` that sets 768px (48rem) as the max viewport.
+     Note that I didn't set a CSS lock for this, so it will keep growing, but it shouldn't matter
+     because at 50rem the layout will turn to row, thus removing horizontal gutters. */
+  --h-gutter: calc(
+    var(--space-10) + (48 - 40) *
+      (
+        (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+          (768 - var(--fluid-min-width))
+      )
+  );
+
+  /* Override global measure axiom so it can fill and adapt to its parent container. */
+  max-inline-size: unset;
+  /* Remove the default padding */
+  padding: 0;
+}
+
+.hero {
+  --region-space: calc(var(--space-16) + (56 - 64) * var(--fluid-bp));
+  --flow-space: calc(var(--space-10) + (48 - 40) * var(--fluid-bp));
+  text-align: center;
+}
+
+/* Set a narrower measure for the hero heading */
+
+.hero h1 {
+  --measure: 12ch;
+  margin-inline: auto;
+}
+
+/* Underline emphasized words */
+
+.hero em {
+  position: relative;
+  font-style: normal;
+}
+
+.hero em::after {
+  content: '';
+  background: var(--color-eucalyptus);
+  position: absolute;
+  width: 100%;
+  height: calc(3 / 16 * 1rem);
+  bottom: var(--space-1);
+  left: 0;
+}
+
+.hero > .button {
+  padding-inline: calc(var(--space-6) + (32 - 24) * var(--fluid-bp));
+}
+
+.icon {
+  display: inline-block;
+  width: calc(20 / 16 * 1em);
+  height: calc(20 / 16 * 1em);
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.site-footer {
+  --flow-space: var(--space-14);
+  padding-top: var(--space-8);
+  padding-bottom: calc(var(--space-16) + (112 - 64) * var(--fluid-bp));
+}
+
+.site-footer .logo {
+  margin-inline: auto;
+}
+
+.site-footer address,
+.site-footer ul {
+  max-inline-size: unset;
+}
+
+.site-footer .icon-links {
+  padding: 0;
+  display: flex;
+  gap: var(--space-7);
+  justify-content: center;
+}
+
+.site-header {
+  padding-top: calc(var(--space-8) + (56 - 32) * var(--fluid-bp));
+}
+
+.site-header > .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**
+ * Inspired by Heydon Pickering's Flexbox Holy Albatross Reincarnated
+ * Info: https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/
+ *
+ * Switcher elements can be configured by defining these custom properties:
+ * --threshold: max width of child elements before the layout switches to column
+ * --h-gutter: gap between rows
+ * --v-gutter: gap between columns
+ */
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--h-gutter, var(--space-4));
+  -moz-column-gap: var(--v-gutter, var(--space-4));
+       column-gap: var(--v-gutter, var(--space-4));
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold, 30rem) - 100%) * 999);
+  /* Center children if not taking up parent container's full width */
+  margin-inline: auto;
+}
+
+/**
+ * Flow CSS Utility
+ * Info: https://piccalil.li/quick-tip/flow-utility/
+ */
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/**
+ * REGION
+ * Add consistent vertical padding to create regions of content
+ * Can either be configured by setting --region-space or use a default from the space scale
+ */
+
+.region {
+  padding-top: var(--region-space, var(--space-8));
+  padding-bottom: var(--region-space, var(--space-8));
+}
+
+/**
+ * Hide content visually while keeping it accessible to screen readers
+ * Info: https://benmyers.dev/blog/native-visually-hidden/
+ */
+
+.visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.wrapper {
+  padding-inline: var(--gutter, var(--space-4));
+  max-width: var(--wrapper-max-width, 70rem);
+  margin-inline: auto;
+  /* Don't include padding in the width calculation */
+  box-sizing: content-box;
+}
+
+.block {
+  display: block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.bg-dark-purple {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 5 62 / var(--tw-bg-opacity));
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
