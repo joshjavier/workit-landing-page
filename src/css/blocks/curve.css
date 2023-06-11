@@ -1,0 +1,11 @@
+.curve {
+  display: block;
+  max-inline-size: unset;
+  fill: var(--bg-color, var(--color-dark-purple));
+
+  /* Place it at the bottom of the container, overlapping a small portion of the next section */
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% - 1px));
+  z-index: 10;
+}

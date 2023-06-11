@@ -3,6 +3,11 @@
   --threshold: 50rem;
   /* Set max width of feature items on column layout */
   --measure: 57ch;
+  /* Set color for background and curve separator */
+  --bg-color: var(--color-ghost-white);
+  /* Add generous whitespace */
+  --region-space-top: calc(var(--space-44) + (320 - 176) * var(--fluid-bp));
+  --region-space-bottom: calc(54 / 16 * 1rem + (104 - 54) * var(--fluid-bp));
 }
 
 .features ol {

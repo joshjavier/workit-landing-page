@@ -1,6 +1,12 @@
 .hero {
-  --region-space: calc(var(--space-16) + (56 - 64) * var(--fluid-bp));
+  /* Set top and bottom padding */
+  --region-space-top: calc(var(--space-16) + (56 - 64) * var(--fluid-bp));
+  --region-space-bottom: calc(140 / 16 * 1rem + (258 - 140) * var(--fluid-bp));
+  /* Set space between heading and button */
   --flow-space: calc(var(--space-10) + (48 - 40) * var(--fluid-bp));
+  /* Set color for background and curve separator */
+  --bg-color: var(--color-dark-purple);
+
   text-align: center;
 }
 
@@ -26,6 +32,21 @@
   left: 0;
 }
 
-.hero > .button {
+.hero .button {
   padding-inline: calc(var(--space-6) + (32 - 24) * var(--fluid-bp));
+}
+
+.hero img {
+  /* Place at the bottom edge of the hero section above the curve */
+  position: absolute;
+  bottom: 0;
+  left: 52%;
+  transform: translate(-50%, 60%);
+  z-index: 20;
+
+  /* Apply sensible fluid sizing */
+  max-inline-size: calc(767 / 16 * 1rem);
+  width: calc(288px + (767 - 288) * var(--fluid-bp));
+  padding-inline: calc(var(--space-4) + (360 - 16) * var(--fluid-bp));
+  box-sizing: content-box;
 }

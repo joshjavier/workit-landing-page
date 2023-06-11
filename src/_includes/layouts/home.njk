@@ -3,11 +3,19 @@
 {% block content %}
   <main>
     <!-- Hero section -->
-    <div class="[ hero ] [ region ] [ bg-dark-purple text-white ]">
+    <div class="[ hero ] [ region ] [ text-white ]">
       <div class="[ wrapper flow ]">
         <h1>{{ title | md | safe }}</h1>
         <a href="#" class="button">Learn more</a>
       </div>
+      <!-- Hero image -->
+      <img
+        src="../../images/image-hero.webp"
+        alt="3D illustration of an iPhone showing a line graph"
+        width="320"
+        height="184"
+      />
+      {% include "curve.svg" -%}
     </div>
 
     <!-- Features section -->
@@ -28,6 +36,7 @@
           {% endfor %}
         </ol>
       </div>
+      {% include "curve.svg" %}
     </section>
 
     <!-- Call to action section -->
