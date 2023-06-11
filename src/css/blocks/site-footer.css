@@ -6,6 +6,7 @@
 
 .site-footer .logo {
   margin-inline: auto;
+  fill: var(--color-dark-purple);
 }
 
 .site-footer address,
