@@ -392,20 +392,76 @@ a:focus-visible {
   background: var(--color-dark-purple);
 }
 
-.cta {
+.cta-card {
   padding: calc(var(--space-8) + (64 - 32) * var(--fluid-bp));
   text-align: center;
-  max-inline-size: calc(730 / 16 * 1rem);
 }
 
 @media screen and (min-width: 40em) {
-  .cta {
+  .cta-card {
     text-align: left;
   }
 }
 
-.cta > .button {
+.cta-card > .button {
   margin-top: var(--space-8);
+}
+
+.cta {
+  --region-space-top: calc((115 / 16 * 1rem) + (178 - 115) * var(--fluid-bp));
+  --region-space-bottom: calc((74 / 16 * 1rem) + (122 - 74) * var(--fluid-bp));
+}
+
+.cta-inner {
+  /* Use this container as an anchor to position the cta image and card */
+  position: relative;
+  /* Establish a flex context so we can use margin-top for adjusting height */
+  display: flex;
+}
+
+.cta-inner > :first-child {
+  /* Tuck the lower part of the image under the CTA card */
+  z-index: -1;
+  position: absolute;
+
+  /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta-inner > :last-child {
+  margin-top: calc(228 / 16 * 1rem);
+  margin-inline: auto;
+  max-inline-size: calc((288 / 16 * 1rem) + (730 - 288) * var(--fluid-bp));
+}
+
+@media screen and (min-width: 40em) {
+  .cta-inner > :first-child {
+    /* Stick the image the upper-left side of the container */
+    transform: translateX(0);
+    left: 0;
+
+    /* Apply sensible fluid sizing */
+    width: calc((188 / 16 * 1rem) + (477 - 188) * var(--fluid-bp));
+  }
+
+  .cta-inner > :last-child {
+    /* Stick the card to the lower-right side of the container */
+    margin-right: 0;
+    margin-top: calc((151 / 16 * 1rem) + (173 - 151) * var(--fluid-bp));
+  }
+}
+
+.curve {
+  display: block;
+  max-inline-size: unset;
+  fill: var(--bg-color, var(--color-dark-purple));
+
+  /* Place it at the bottom of the container, overlapping a small portion of the next section */
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100% - 1px));
+  z-index: 10;
 }
 
 .feature {
@@ -452,6 +508,11 @@ a:focus-visible {
   --threshold: 50rem;
   /* Set max width of feature items on column layout */
   --measure: 57ch;
+  /* Set color for background and curve separator */
+  --bg-color: var(--color-ghost-white);
+  /* Add generous whitespace */
+  --region-space-top: calc(var(--space-44) + (320 - 176) * var(--fluid-bp));
+  --region-space-bottom: calc(54 / 16 * 1rem + (104 - 54) * var(--fluid-bp));
 }
 
 .features ol {
@@ -475,8 +536,14 @@ a:focus-visible {
 }
 
 .hero {
-  --region-space: calc(var(--space-16) + (56 - 64) * var(--fluid-bp));
+  /* Set top and bottom padding */
+  --region-space-top: calc(var(--space-16) + (56 - 64) * var(--fluid-bp));
+  --region-space-bottom: calc(140 / 16 * 1rem + (258 - 140) * var(--fluid-bp));
+  /* Set space between heading and button */
   --flow-space: calc(var(--space-10) + (48 - 40) * var(--fluid-bp));
+  /* Set color for background and curve separator */
+  --bg-color: var(--color-dark-purple);
+
   text-align: center;
 }
 
@@ -504,8 +571,22 @@ a:focus-visible {
   left: 0;
 }
 
-.hero > .button {
+.hero .button {
   padding-inline: calc(var(--space-6) + (32 - 24) * var(--fluid-bp));
+}
+
+.hero img {
+  /* Place at the bottom edge of the hero section above the curve */
+  position: absolute;
+  bottom: 0;
+  left: 52%;
+  transform: translate(-50%, 60%);
+  z-index: 20;
+
+  /* Apply sensible fluid sizing */
+  max-inline-size: calc(767 / 16 * 1rem);
+  width: calc(288px + (767 - 288) * var(--fluid-bp));
+  box-sizing: content-box;
 }
 
 .icon {
@@ -525,14 +606,20 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.logo {
+  fill: currentColor;
+  display: block;
+  height: auto;
+}
+
 .site-footer {
   --flow-space: var(--space-14);
-  padding-top: var(--space-8);
   padding-bottom: calc(var(--space-16) + (112 - 64) * var(--fluid-bp));
 }
 
 .site-footer .logo {
   margin-inline: auto;
+  fill: var(--color-dark-purple);
 }
 
 .site-footer address,
@@ -593,12 +680,25 @@ Single-colored icons can be modified like so:
 /**
  * REGION
  * Add consistent vertical padding to create regions of content
- * Can either be configured by setting --region-space or use a default from the space scale
+ *
+ * Padding can be configured to have the same values with --region-space,
+ * or different values by setting --region-space-top and --region-space-bottom.
+ * Otherwise, regions will use a default from the space scale.
  */
 
 .region {
-  padding-top: var(--region-space, var(--space-8));
-  padding-bottom: var(--region-space, var(--space-8));
+  padding-top: var(--region-space-top, var(--region-space, var(--space-8)));
+  padding-bottom: var(
+    --region-space-bottom,
+    var(--region-space, var(--space-8))
+  );
+}
+
+/* Use SVG divider if one exists among child elements */
+
+.region:has(.curve) {
+  position: relative;
+  background: var(--bg-color, none);
 }
 
 /**
