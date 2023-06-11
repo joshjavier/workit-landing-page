@@ -1,15 +1,14 @@
-.cta {
+.cta-card {
   padding: calc(var(--space-8) + (64 - 32) * var(--fluid-bp));
   text-align: center;
-  max-inline-size: calc(730 / 16 * 1rem);
 }
 
 @media screen and (min-width: 40em) {
-  .cta {
+  .cta-card {
     text-align: left;
   }
 }
 
-.cta > .button {
+.cta-card > .button {
   margin-top: var(--space-8);
 }

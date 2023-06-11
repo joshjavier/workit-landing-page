@@ -1,0 +1,44 @@
+.cta {
+  --region-space-top: calc((115 / 16 * 1rem) + (178 - 115) * var(--fluid-bp));
+  --region-space-bottom: calc((74 / 16 * 1rem) + (122 - 74) * var(--fluid-bp));
+}
+
+.cta-inner {
+  /* Use this container as an anchor to position the cta image and card */
+  position: relative;
+  /* Establish a flex context so we can use margin-top for adjusting height */
+  display: flex;
+}
+
+.cta-inner > :first-child {
+  /* Tuck the lower part of the image under the CTA card */
+  z-index: -1;
+  position: absolute;
+
+  /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta-inner > :last-child {
+  margin-top: calc(228 / 16 * 1rem);
+  margin-inline: auto;
+  max-inline-size: calc((288 / 16 * 1rem) + (730 - 288) * var(--fluid-bp));
+}
+
+@media screen and (min-width: 40em) {
+  .cta-inner > :first-child {
+    /* Stick the image the upper-left side of the container */
+    transform: translateX(0);
+    left: 0;
+
+    /* Apply sensible fluid sizing */
+    width: calc((188 / 16 * 1rem) + (477 - 188) * var(--fluid-bp));
+  }
+
+  .cta-inner > :last-child {
+    /* Stick the card to the lower-right side of the container */
+    margin-right: 0;
+    margin-top: calc((151 / 16 * 1rem) + (173 - 151) * var(--fluid-bp));
+  }
+}
