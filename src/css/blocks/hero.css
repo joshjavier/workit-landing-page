@@ -47,6 +47,5 @@
   /* Apply sensible fluid sizing */
   max-inline-size: calc(767 / 16 * 1rem);
   width: calc(288px + (767 - 288) * var(--fluid-bp));
-  padding-inline: calc(var(--space-4) + (360 - 16) * var(--fluid-bp));
   box-sizing: content-box;
 }
