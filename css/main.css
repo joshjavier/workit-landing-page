@@ -395,6 +395,7 @@ a:focus-visible {
 }
 
 .cta-card {
+  --flow-space: calc(var(--space-4) + (32 - 16) * var(--fluid-bp));
   padding: calc(var(--space-8) + (64 - 32) * var(--fluid-bp));
   text-align: center;
 }
@@ -403,10 +404,6 @@ a:focus-visible {
   .cta-card {
     text-align: left;
   }
-}
-
-.cta-card > .button {
-  margin-top: var(--space-8);
 }
 
 .cta {
