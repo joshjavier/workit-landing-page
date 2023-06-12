@@ -13,9 +13,3 @@
     var(--region-space, var(--space-8))
   );
 }
-
-/* Use SVG divider if one exists among child elements */
-.region:has(.curve) {
-  position: relative;
-  background: var(--bg-color, none);
-}

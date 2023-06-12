@@ -9,3 +9,9 @@
   transform: translateY(calc(100% - 1px));
   z-index: 10;
 }
+
+/* Position parent element so the divider can anchor to it */
+:has(.curve) {
+  position: relative;
+  background-color: var(--bg-color, none);
+}

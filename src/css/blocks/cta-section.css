@@ -1,6 +1,7 @@
 .cta {
   --region-space-top: calc((115 / 16 * 1rem) + (178 - 115) * var(--fluid-bp));
   --region-space-bottom: calc((74 / 16 * 1rem) + (122 - 74) * var(--fluid-bp));
+  overflow: hidden;
 }
 
 .cta-inner {
@@ -24,6 +25,7 @@
   margin-top: calc(228 / 16 * 1rem);
   margin-inline: auto;
   max-inline-size: calc((288 / 16 * 1rem) + (730 - 288) * var(--fluid-bp));
+  position: relative;
 }
 
 @media screen and (min-width: 40em) {
@@ -40,5 +42,16 @@
     /* Stick the card to the lower-right side of the container */
     margin-right: 0;
     margin-top: calc((151 / 16 * 1rem) + (173 - 151) * var(--fluid-bp));
+  }
+
+  /* Add oval patterns */
+  .cta-inner > :last-child::after {
+    content: '';
+    position: absolute;
+    background: no-repeat center/contain url('../images/bg-pattern-3.svg');
+    width: calc(221 / 16 * 1rem);
+    height: calc(212 / 16 * 1rem);
+    top: 62%;
+    left: 62%;
   }
 }

@@ -10,6 +10,34 @@
   text-align: center;
 }
 
+.hero-inner {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add oval patterns */
+.hero-inner::before,
+.hero-inner::after {
+  content: '';
+  position: absolute;
+}
+
+.hero-inner::before {
+  background: no-repeat center/contain url('../images/bg-pattern-1.svg');
+  width: calc(350 / 16 * 1rem);
+  height: calc(317 / 16 * 1rem);
+  right: calc(80% + var(--size-step-4));
+  top: 1em;
+}
+
+.hero-inner::after {
+  background: no-repeat center/contain url('../images/bg-pattern-2.svg');
+  width: calc(174 / 16 * 1rem);
+  height: calc(181 / 16 * 1rem);
+  left: calc(85.7% + var(--size-step-4));
+  bottom: 15%;
+}
+
 /* Set a narrower measure for the hero heading */
 .hero h1 {
   --measure: 12ch;
