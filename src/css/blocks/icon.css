@@ -1,7 +1,7 @@
 .icon {
   display: inline-block;
-  width: calc(20 / 16 * 1em);
-  height: calc(20 / 16 * 1em);
+  width: calc(20 / 16 * 1rem);
+  height: calc(20 / 16 * 1rem);
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
