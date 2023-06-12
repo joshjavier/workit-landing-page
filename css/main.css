@@ -410,6 +410,7 @@ a:focus-visible {
 .cta {
   --region-space-top: calc((115 / 16 * 1rem) + (178 - 115) * var(--fluid-bp));
   --region-space-bottom: calc((74 / 16 * 1rem) + (122 - 74) * var(--fluid-bp));
+  overflow: hidden;
 }
 
 .cta-inner {
@@ -433,6 +434,7 @@ a:focus-visible {
   margin-top: calc(228 / 16 * 1rem);
   margin-inline: auto;
   max-inline-size: calc((288 / 16 * 1rem) + (730 - 288) * var(--fluid-bp));
+  position: relative;
 }
 
 @media screen and (min-width: 40em) {
@@ -450,6 +452,17 @@ a:focus-visible {
     margin-right: 0;
     margin-top: calc((151 / 16 * 1rem) + (173 - 151) * var(--fluid-bp));
   }
+
+  /* Add oval patterns */
+  .cta-inner > :last-child::after {
+    content: '';
+    position: absolute;
+    background: no-repeat center/contain url('../images/bg-pattern-3.svg');
+    width: calc(221 / 16 * 1rem);
+    height: calc(212 / 16 * 1rem);
+    top: 62%;
+    left: 62%;
+  }
 }
 
 .curve {
@@ -462,6 +475,13 @@ a:focus-visible {
   bottom: 0;
   transform: translateY(calc(100% - 1px));
   z-index: 10;
+}
+
+/* Position parent element so the divider can anchor to it */
+
+:has(.curve) {
+  position: relative;
+  background-color: var(--bg-color, none);
 }
 
 .feature {
@@ -545,6 +565,35 @@ a:focus-visible {
   --bg-color: var(--color-dark-purple);
 
   text-align: center;
+}
+
+.hero-inner {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add oval patterns */
+
+.hero-inner::before,
+.hero-inner::after {
+  content: '';
+  position: absolute;
+}
+
+.hero-inner::before {
+  background: no-repeat center/contain url('../images/bg-pattern-1.svg');
+  width: calc(350 / 16 * 1rem);
+  height: calc(317 / 16 * 1rem);
+  right: calc(80% + var(--size-step-4));
+  top: 1em;
+}
+
+.hero-inner::after {
+  background: no-repeat center/contain url('../images/bg-pattern-2.svg');
+  width: calc(174 / 16 * 1rem);
+  height: calc(181 / 16 * 1rem);
+  left: calc(85.7% + var(--size-step-4));
+  bottom: 15%;
 }
 
 /* Set a narrower measure for the hero heading */
@@ -692,13 +741,6 @@ Single-colored icons can be modified like so:
     --region-space-bottom,
     var(--region-space, var(--space-8))
   );
-}
-
-/* Use SVG divider if one exists among child elements */
-
-.region:has(.curve) {
-  position: relative;
-  background: var(--bg-color, none);
 }
 
 /**
