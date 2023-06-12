@@ -12,11 +12,8 @@
 }
 
 .cta-inner > :first-child {
-  /* Tuck the lower part of the image under the CTA card */
-  z-index: -1;
-  position: absolute;
-
   /* Center horizontally */
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -26,6 +23,9 @@
   margin-inline: auto;
   max-inline-size: calc((288 / 16 * 1rem) + (730 - 288) * var(--fluid-bp));
   position: relative;
+
+  /* Place the card on top so the lower part of the image is tucked underneath */
+  z-index: 10;
 }
 
 @media screen and (min-width: 40em) {

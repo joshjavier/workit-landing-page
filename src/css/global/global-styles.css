@@ -21,6 +21,7 @@ body {
   line-height: 1.75;
   font-weight: 400;
   color: var(--color-davys-grey);
+  --bg-color: var(--color-white);
 
   /* Defaults for wrappers */
   --wrapper-max-width: 70rem; /* 1120px */
