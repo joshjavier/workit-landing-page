@@ -4,6 +4,7 @@
   text-align: center;
   display: inline-block;
   text-decoration: none;
+  letter-spacing: calc(-0.18 / 16 * 1rem);
 }
 
 .button {
