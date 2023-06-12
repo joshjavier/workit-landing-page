@@ -353,6 +353,7 @@ a:focus-visible {
   text-align: center;
   display: inline-block;
   text-decoration: none;
+  letter-spacing: calc(-0.18 / 16 * 1rem);
 }
 
 .button {
@@ -485,7 +486,8 @@ a:focus-visible {
 }
 
 .feature {
-  --h-gutter: var(--space-6);
+  --flow-space: calc(var(--space-4) + (28 - 16) * var(--fluid-bp));
+  --h-gutter: calc(var(--space-6) + (56 - 24) * var(--fluid-bp));
   --v-gutter: var(--space-8);
   text-align: center;
   container-type: inline-size;
@@ -510,13 +512,14 @@ a:focus-visible {
 
 .feature .marker {
   font-family: var(--font-serif);
+  font-size: var(--size-step-1);
   line-height: 1.8;
   border: 1px solid var(--color-davys-grey);
   border-radius: 50%;
   display: inline-grid;
   place-content: center;
-  width: calc(48 / 16 * 1em);
-  height: calc(48 / 16 * 1em);
+  width: calc(var(--space-12) + (56 - 48) * var(--fluid-bp));
+  height: calc(var(--space-12) + (56 - 48) * var(--fluid-bp));
 
   /* Center vertically on row layout */
   flex: 0 0 auto;
@@ -629,7 +632,7 @@ a:focus-visible {
   position: absolute;
   bottom: 0;
   left: 52%;
-  transform: translate(-50%, 60%);
+  transform: translate(-50%, 52.5%);
   z-index: 20;
 
   /* Apply sensible fluid sizing */
