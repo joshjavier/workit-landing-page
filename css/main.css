@@ -309,6 +309,7 @@ body {
   line-height: 1.75;
   font-weight: 400;
   color: var(--color-davys-grey);
+  --bg-color: var(--color-white);
 
   /* Defaults for wrappers */
   --wrapper-max-width: 70rem; /* 1120px */
@@ -422,11 +423,8 @@ a:focus-visible {
 }
 
 .cta-inner > :first-child {
-  /* Tuck the lower part of the image under the CTA card */
-  z-index: -1;
-  position: absolute;
-
   /* Center horizontally */
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -436,6 +434,9 @@ a:focus-visible {
   margin-inline: auto;
   max-inline-size: calc((288 / 16 * 1rem) + (730 - 288) * var(--fluid-bp));
   position: relative;
+
+  /* Place the card on top so the lower part of the image is tucked underneath */
+  z-index: 10;
 }
 
 @media screen and (min-width: 40em) {
@@ -643,8 +644,8 @@ a:focus-visible {
 
 .icon {
   display: inline-block;
-  width: calc(20 / 16 * 1em);
-  height: calc(20 / 16 * 1em);
+  width: calc(20 / 16 * 1rem);
+  height: calc(20 / 16 * 1rem);
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -777,8 +778,8 @@ Single-colored icons can be modified like so:
   display: block;
 }
 
-.inline-flex {
-  display: inline-flex;
+.flex {
+  display: flex;
 }
 
 .bg-dark-purple {
